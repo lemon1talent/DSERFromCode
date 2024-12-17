@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <BuildTasksDirectory Condition=" '$(BuildTasksDirectory)' == ''">$(MSBuildProgramFiles32)\MSBuild\Microsoft\Dynamics\AX</BuildTasksDirectory>
+    <Model>DSLearning</Model>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <OutputPath>bin</OutputPath>
+    <SchemaVersion>2.0</SchemaVersion>
+    <GenerateCrossReferences>True</GenerateCrossReferences>
+    <RunAppCheckerRules>False</RunAppCheckerRules>
+    <LogAppcheckerDiagsAsErrors>False</LogAppcheckerDiagsAsErrors>
+    <DeployOnline>False</DeployOnline>
+    <ProjectGuid>{ad594e71-0b31-4808-98c5-68e51aedbc14}</ProjectGuid>
+    <Name>DSERFromCode</Name>
+    <RootNamespace>DSERFromCode</RootNamespace>
+    <StartupType>Class</StartupType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Configuration>Debug</Configuration>
+    <DBSyncInBuild>True</DBSyncInBuild>
+    <GenerateFormAdaptors>False</GenerateFormAdaptors>
+    <Company>
+    </Company>
+    <Partition>initial</Partition>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DataEntityExpandParentChildRelations>False</DataEntityExpandParentChildRelations>
+    <DataEntityUseLabelTextAsFieldName>False</DataEntityUseLabelTextAsFieldName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="Form Extensions\" />
+    <Folder Include="Table Extensions\" />
+    <Folder Include="Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AxClass\DSERFileDestinationStream">
+      <SubType>Content</SubType>
+      <Name>DSERFileDestinationStream</Name>
+      <Link>Classes\DSERFileDestinationStream</Link>
+    </Content>
+    <Content Include="AxClass\DSERGenericExecutionController">
+      <SubType>Content</SubType>
+      <Name>DSERGenericExecutionController</Name>
+      <Link>Classes\DSERGenericExecutionController</Link>
+    </Content>
+    <Content Include="AxClass\DSERGenericExecutionDataContract">
+      <SubType>Content</SubType>
+      <Name>DSERGenericExecutionDataContract</Name>
+      <Link>Classes\DSERGenericExecutionDataContract</Link>
+    </Content>
+    <Content Include="AxClass\DSERGenericExecutionService">
+      <SubType>Content</SubType>
+      <Name>DSERGenericExecutionService</Name>
+      <Link>Classes\DSERGenericExecutionService</Link>
+    </Content>
+    <Content Include="AxClass\DSERIFormatMappingRunWithDestinationAction">
+      <SubType>Content</SubType>
+      <Name>DSERIFormatMappingRunWithDestinationAction</Name>
+      <Link>Classes\DSERIFormatMappingRunWithDestinationAction</Link>
+    </Content>
+    <Content Include="AxClass\DSERSolutionTableForm_EventHandler">
+      <SubType>Content</SubType>
+      <Name>DSERSolutionTableForm_EventHandler</Name>
+      <Link>Classes\DSERSolutionTableForm_EventHandler</Link>
+    </Content>
+    <Content Include="AxClass\DSERSolutionTableForm_Extension">
+      <SubType>Content</SubType>
+      <Name>DSERSolutionTableForm_Extension</Name>
+      <Link>Classes\DSERSolutionTableForm_Extension</Link>
+    </Content>
+    <Content Include="AxClass\DSERSolutionTable_ERSolutionTable_Extension">
+      <SubType>Content</SubType>
+      <Name>DSERSolutionTable_ERSolutionTable_Extension</Name>
+      <Link>Classes\DSERSolutionTable_ERSolutionTable_Extension</Link>
+    </Content>
+    <Content Include="AxClass\DSERSolutionTable_Extension">
+      <SubType>Content</SubType>
+      <Name>DSERSolutionTable_Extension</Name>
+      <Link>Classes\DSERSolutionTable_Extension</Link>
+    </Content>
+    <Content Include="AxClass\DSUtils">
+      <SubType>Content</SubType>
+      <Name>DSUtils</Name>
+      <Link>Classes\DSUtils</Link>
+    </Content>
+    <Content Include="AxFormExtension\ERSolutionTable.DSLearning">
+      <SubType>Content</SubType>
+      <Name>ERSolutionTable.DSLearning</Name>
+      <Link>Form Extensions\ERSolutionTable.DSLearning</Link>
+    </Content>
+    <Content Include="AxTableExtension\ERSolutionTable.DSLearning">
+      <SubType>Content</SubType>
+      <Name>ERSolutionTable.DSLearning</Name>
+      <Link>Table Extensions\ERSolutionTable.DSLearning</Link>
+    </Content>
+    <Content Include="AxTable\DSERSolutionTableRunByCodeObjectParameters">
+      <SubType>Content</SubType>
+      <Name>DSERSolutionTableRunByCodeObjectParameters</Name>
+      <Link>Tables\DSERSolutionTableRunByCodeObjectParameters</Link>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.17.0.targets" />
+</Project>
